@@ -1,0 +1,181 @@
+body{
+    background-color: rgb(211, 230, 230);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.controls{
+    margin-left:5px ;
+    position: fixed;
+    top: 30%;
+    right: 20px;
+}
+.control:hover{
+    background-color:rgb(98, 188, 223) ;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color:#fff;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    .control{
+        font-size: 1.2rem;
+        padding: 4px;
+        margin: 5px;
+    }
+}
+/* .home{
+    position: absolute;
+    left: 0;
+    top: 0%;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+.user, .briefcase, .contact{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+.showhome{
+    transform: translateX(0%);
+}
+.hidehome{
+    transform: translateX(-100%);  
+}
+.showuser{
+    transform: translateX(0%);
+    margin-left:10px ;
+    padding:0px  20px;
+}
+.hideuser{
+    transform: translateX(-100%);  
+}
+.showbriefcase{
+    transform: translateX(0%);
+}
+.hidebriefcase{
+    transform: translateX(-100%);  
+}
+.showcontact{
+    transform: translateX(0%);
+    padding-left: 30px;
+}
+.hidecontact{
+    transform: translateX(-100%);  
+} */
+
+
+.photo{
+    filter: grayscale(80%);
+    border-radius: 8px;
+    border: 5px solid rgb(95, 95, 90);
+}
+.mainimg{
+    background: url(img3.png) no-repeat;
+    color: rgb(171, 171, 221);
+}
+.greet{
+    font-size: 3rem;
+}
+.photo:hover{
+    filter: grayscale(0%);
+    transform: scale(1.02,1.02);
+    border: 5px solid rgb(100, 206, 206) ;
+}
+.cvbutton{
+    width: 180px;
+    height: 50px;
+    border-radius: 30px;
+}
+.cvbutton:hover{
+    transform: scale(1.05,1.05);
+}
+
+.aboutheading{
+    line-height: 200px;
+    text-align: center;
+    font-size: 5rem;
+}
+.cardabout{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+.cardabout:hover{
+    border: 1px solid rgb(77, 152, 182) ;
+    transform: scale(1.02,1.03);
+}
+.cardheading{
+    font-size: 4rem;
+    color: rgb(77, 152, 182);
+}
+.aboutheading2{
+    text-align: center;
+    font-size: 3rem;
+}
+.workheading{
+    line-height: 150px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.contecticon{
+    font-size: 2rem;
+}
+.contectcontrolbutton{
+    font-size: 2.2rem;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.contectcontrolbutton:hover i{
+    color: rgb(77, 152, 182);
+}
+
+.pcard {
+    position: relative;
+    width: 50%;
+  }
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(77, 152, 182);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+  
+.pcard:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.icon{
+    color: #fff;
+    font-size: 50px;
+    margin: 15px;
+}
+.icon:hover{
+    color:  rgb(36, 87, 108);
+}
+
