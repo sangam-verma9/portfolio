@@ -29,48 +29,13 @@ body{
         margin: 5px;
     }
 }
-/* .home{
-    position: absolute;
-    left: 0;
-    top: 0%;
-    transform: translateX(-100%);
-    transition: all 0.3s linear;
-}
-.user, .briefcase, .contact{
+
+.home, .user, .briefcase, .contact{
     position: absolute;
     left: 0%;
     top: 0%;
-    transform: translateX(-100%);
     transition: all 0.3s linear;
 }
-.showhome{
-    transform: translateX(0%);
-}
-.hidehome{
-    transform: translateX(-100%);  
-}
-.showuser{
-    transform: translateX(0%);
-    margin-left:10px ;
-    padding:0px  20px;
-}
-.hideuser{
-    transform: translateX(-100%);  
-}
-.showbriefcase{
-    transform: translateX(0%);
-}
-.hidebriefcase{
-    transform: translateX(-100%);  
-}
-.showcontact{
-    transform: translateX(0%);
-    padding-left: 30px;
-}
-.hidecontact{
-    transform: translateX(-100%);  
-} */
-
 
 .photo{
     filter: grayscale(80%);

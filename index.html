@@ -21,16 +21,16 @@
 <body>
     <div class="controls d-flex flex-column" style="z-index: 5;">
         <div class="control controlhome">
-               <a href="#home" style="color: black;"> <i class="fas fa-home"></i></a>
+             <button onclick="callhome()" id="watchButton"><i class="fas fa-home"></i></button>
         </div>
         <div class="control controluser">
-            <a href="#user" style="color: black;"><i class="fas fa-user"></i></a>
+            <button onclick="calluser()"><i class="fas fa-user"></i></button>
         </div>
         <div class="control controlbriefcase">
-            <a href="#briefcase" style="color: black;"><i class="fas fa-briefcase"></i></a>
+            <button onclick="callbriefcase()"><i class="fas fa-briefcase"></i></button>
         </div>
         <div class="control controlcontact">
-            <a href="#contact" style="color: black;"><i class="fas fa-envelope-open"></i></a>
+            <button onclick="callcontact()"><i class="fas fa-envelope-open"></i></button>
         </div>
     </div>
 
@@ -48,7 +48,7 @@
                         I
                         am in
                         second year</h4>
-                    <a href="https://drive.google.com/file/d/1wS2JM8Qa6msyyc41_Hsw9YAM0fQunqf0/view?usp=share_link"
+                    <a href="https://drive.google.com/file/d/1CN4h6Ykoc89g6IbcUT51laAivXOtp2LC/view?usp=sharing"
                         class=" mt-3" target="_blank" class=" mt-3"><button class="cvbutton">Download CV <i
                                 class="fa-solid fa-download fs-5"></i></button></a>
                 </div>
@@ -78,7 +78,7 @@
                         story
                         books and playing with my friends.
                     </h5>
-                    <a href="https://drive.google.com/file/d/1wS2JM8Qa6msyyc41_Hsw9YAM0fQunqf0/view?usp=share_link"
+                    <a href="https://drive.google.com/file/d/1CN4h6Ykoc89g6IbcUT51laAivXOtp2LC/view?usp=sharing"
                         class=" mt-3" target="_blank" class="mt-5"><button class="cvbutton">Download CV <i
                                 class="fa-solid fa-download fs-5"></i></button></a>
                 </div>
@@ -427,7 +427,7 @@
             </div>
             <div class="row mb-4">
                 <div class="col-md-6 mb-3">
-                    <a href="https://drive.google.com/file/d/1wS2JM8Qa6msyyc41_Hsw9YAM0fQunqf0/view?usp=share_link"
+                    <a href="https://drive.google.com/file/d/1CN4h6Ykoc89g6IbcUT51laAivXOtp2LC/view?usp=sharing"
                         class=" mt-3" target="_blank"><button class="cvbutton">Download CV <i
                                 class="fa-solid fa-download fs-5"></i></button></a>
                 </div>
@@ -449,57 +449,36 @@
 
     </div>
 
-    <!-- <script>
-        let homeele = document.querySelector('.controlhome')
-        let homesection = document.querySelector('.home');
-        let briefcasesection = document.querySelector('.briefcase');
-        let contactsection = document.querySelector('.contact');
-        homeele.addEventListener('click', () => {
-            homesection.classList.add('showhome');
-            usersection.classList.remove('showuser');
-            // usersection.classList.add('hideuser');
-            contactsection.classList.remove('showbriefcase');
-            // contactsection.classList.add('hidebriefcase');
-            briefcasesection.classList.remove('showcontact');
-            // briefcasesection.classList.add('hidecontact');
-        })
+    <script>
+                window.onload = function () {
+            document.getElementById("watchButton").click();
+        };
+        function callhome() {
+            document.getElementById('home').style.cssText = 'left:0;';
+            document.getElementById('user').style.cssText = 'left:-100%;';
+            document.getElementById('briefcase').style.cssText = 'left:-100%;';
+            document.getElementById('contact').style.cssText = 'left:-100%;';
+        }
+        function calluser() {
+            document.getElementById('user').style.cssText = 'left:0;';
+            document.getElementById('home').style.cssText = 'left:-100%;';
+            document.getElementById('briefcase').style.cssText = 'left:-100%;';
+            document.getElementById('contact').style.cssText = 'left:-100%;';
+        }
+        function callbriefcase() {
+            document.getElementById('briefcase').style.cssText = 'left:0;';
+            document.getElementById('home').style.cssText = 'left:-100%;';
+            document.getElementById('user').style.cssText = 'left:-100%;';
+            document.getElementById('contact').style.cssText = 'left:-100%;';
+        }
+        function callcontact() {
+            document.getElementById('contact').style.cssText = 'left:0;';
+            document.getElementById('home').style.cssText = 'left:-100%;';
+            document.getElementById('user').style.cssText = 'left:-100%;';
+            document.getElementById('briefcase').style.cssText = 'left:-100%;';
+        }
 
-        let userele = document.querySelector('.controluser')
-        let usersection = document.querySelector('.user');
-        userele.addEventListener('click', () => {
-            usersection.classList.add('showuser');
-            homesection.classList.remove('showhome');
-            // homesection.classList.add('hidehome');
-            briefcasesection.classList.remove('showbriefcase');
-            // briefcasesection.classList.add('hidebriefcase');
-            contactsection.classList.remove('showcontact');
-            // contactsection.classList.add('hidecontact');
-        })
-
-        let briefcaseele = document.querySelector('.controlbriefcase')
-        
-        briefcaseele.addEventListener('click', () => {
-            briefcasesection.classList.add('showbriefcase');
-            usersection.classList.remove('showhome');
-            // usersection.classList.add('hidehome');
-            homesection.classList.remove('showuser');
-            // homesection.classList.add('hideuser');
-            contactsection.classList.remove('showcontact');
-            // contactsection.classList.add('hidecontact');
-        })
-
-        let contactele = document.querySelector('.controlcontact')
-        
-        contactele.addEventListener('click', () => {
-            contactsection.classList.add('showcontact')
-            homesection.classList.remove('showhome');
-            // homesection.classList.add('hidehome');
-            usersection.classList.remove('showuser');
-            // usersection.classList.add('hideuser');
-            briefcasesection.classList.remove('showcontact');
-            // briefcasesection.classList.add('hidecontact');
-        })
-    </script> -->
+    </script>
 
 
 
