@@ -30,13 +30,13 @@ body{
     }
 }
 
-.home, .user, .briefcase, .contact{
+/* .home, .user, .briefcase, .contact{
     position: absolute;
     left: 0%;
     top: 0%;
     transition: all 0.3s linear;
 }
-
+ */
 .photo{
     filter: grayscale(80%);
     border-radius: 8px;
