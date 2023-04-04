@@ -1,3 +1,35 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@sangam-verma9 
+sangam-verma9
+/
+portfolio
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+portfolio/index.html
+@sangam-verma9
+sangam-verma9 first
+Latest commit 7f268a3 2 days ago
+ History
+ 1 contributor
+509 lines (482 sloc)  27.4 KB
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,16 +53,16 @@
 <body>
     <div class="controls d-flex flex-column" style="z-index: 5;">
         <div class="control controlhome">
-             <button onclick="callhome()" id="watchButton"><i class="fas fa-home"></i></button>
+               <a href="#home" style="color: black;"> <i class="fas fa-home"></i></a>
         </div>
         <div class="control controluser">
-            <button onclick="calluser()"><i class="fas fa-user"></i></button>
+            <a href="#user" style="color: black;"><i class="fas fa-user"></i></a>
         </div>
         <div class="control controlbriefcase">
-            <button onclick="callbriefcase()"><i class="fas fa-briefcase"></i></button>
+            <a href="#briefcase" style="color: black;"><i class="fas fa-briefcase"></i></a>
         </div>
         <div class="control controlcontact">
-            <button onclick="callcontact()"><i class="fas fa-envelope-open"></i></button>
+            <a href="#contact" style="color: black;"><i class="fas fa-envelope-open"></i></a>
         </div>
     </div>
 
@@ -48,7 +80,7 @@
                         I
                         am in
                         second year</h4>
-                    <a href="https://drive.google.com/file/d/1CN4h6Ykoc89g6IbcUT51laAivXOtp2LC/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1wS2JM8Qa6msyyc41_Hsw9YAM0fQunqf0/view?usp=share_link"
                         class=" mt-3" target="_blank" class=" mt-3"><button class="cvbutton">Download CV <i
                                 class="fa-solid fa-download fs-5"></i></button></a>
                 </div>
@@ -78,7 +110,7 @@
                         story
                         books and playing with my friends.
                     </h5>
-                    <a href="https://drive.google.com/file/d/1CN4h6Ykoc89g6IbcUT51laAivXOtp2LC/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1wS2JM8Qa6msyyc41_Hsw9YAM0fQunqf0/view?usp=share_link"
                         class=" mt-3" target="_blank" class="mt-5"><button class="cvbutton">Download CV <i
                                 class="fa-solid fa-download fs-5"></i></button></a>
                 </div>
@@ -427,7 +459,7 @@
             </div>
             <div class="row mb-4">
                 <div class="col-md-6 mb-3">
-                    <a href="https://drive.google.com/file/d/1CN4h6Ykoc89g6IbcUT51laAivXOtp2LC/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1wS2JM8Qa6msyyc41_Hsw9YAM0fQunqf0/view?usp=share_link"
                         class=" mt-3" target="_blank"><button class="cvbutton">Download CV <i
                                 class="fa-solid fa-download fs-5"></i></button></a>
                 </div>
@@ -449,36 +481,54 @@
 
     </div>
 
-    <script>
-                window.onload = function () {
-            document.getElementById("watchButton").click();
-        };
-        function callhome() {
-            document.getElementById('home').style.cssText = 'left:0;';
-            document.getElementById('user').style.cssText = 'left:-100%;';
-            document.getElementById('briefcase').style.cssText = 'left:-100%;';
-            document.getElementById('contact').style.cssText = 'left:-100%;';
-        }
-        function calluser() {
-            document.getElementById('user').style.cssText = 'left:0;';
-            document.getElementById('home').style.cssText = 'left:-100%;';
-            document.getElementById('briefcase').style.cssText = 'left:-100%;';
-            document.getElementById('contact').style.cssText = 'left:-100%;';
-        }
-        function callbriefcase() {
-            document.getElementById('briefcase').style.cssText = 'left:0;';
-            document.getElementById('home').style.cssText = 'left:-100%;';
-            document.getElementById('user').style.cssText = 'left:-100%;';
-            document.getElementById('contact').style.cssText = 'left:-100%;';
-        }
-        function callcontact() {
-            document.getElementById('contact').style.cssText = 'left:0;';
-            document.getElementById('home').style.cssText = 'left:-100%;';
-            document.getElementById('user').style.cssText = 'left:-100%;';
-            document.getElementById('briefcase').style.cssText = 'left:-100%;';
-        }
-
-    </script>
+    <!-- <script>
+        let homeele = document.querySelector('.controlhome')
+        let homesection = document.querySelector('.home');
+        let briefcasesection = document.querySelector('.briefcase');
+        let contactsection = document.querySelector('.contact');
+        homeele.addEventListener('click', () => {
+            homesection.classList.add('showhome');
+            usersection.classList.remove('showuser');
+            // usersection.classList.add('hideuser');
+            contactsection.classList.remove('showbriefcase');
+            // contactsection.classList.add('hidebriefcase');
+            briefcasesection.classList.remove('showcontact');
+            // briefcasesection.classList.add('hidecontact');
+        })
+        let userele = document.querySelector('.controluser')
+        let usersection = document.querySelector('.user');
+        userele.addEventListener('click', () => {
+            usersection.classList.add('showuser');
+            homesection.classList.remove('showhome');
+            // homesection.classList.add('hidehome');
+            briefcasesection.classList.remove('showbriefcase');
+            // briefcasesection.classList.add('hidebriefcase');
+            contactsection.classList.remove('showcontact');
+            // contactsection.classList.add('hidecontact');
+        })
+        let briefcaseele = document.querySelector('.controlbriefcase')
+        
+        briefcaseele.addEventListener('click', () => {
+            briefcasesection.classList.add('showbriefcase');
+            usersection.classList.remove('showhome');
+            // usersection.classList.add('hidehome');
+            homesection.classList.remove('showuser');
+            // homesection.classList.add('hideuser');
+            contactsection.classList.remove('showcontact');
+            // contactsection.classList.add('hidecontact');
+        })
+        let contactele = document.querySelector('.controlcontact')
+        
+        contactele.addEventListener('click', () => {
+            contactsection.classList.add('showcontact')
+            homesection.classList.remove('showhome');
+            // homesection.classList.add('hidehome');
+            usersection.classList.remove('showuser');
+            // usersection.classList.add('hideuser');
+            briefcasesection.classList.remove('showcontact');
+            // briefcasesection.classList.add('hidecontact');
+        })
+    </script> -->
 
 
 
@@ -486,3 +536,18 @@
 </body>
 
 </html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+portfolio/index.html at 7f268a35319935b7d33ed0e7746d66e1717fd8ab · sangam-verma9/portfolio
