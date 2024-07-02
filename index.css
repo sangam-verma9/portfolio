@@ -95,7 +95,7 @@ body{
     border-radius: 30px;
 }
 .cvbutton:hover{
-    transform: scale(1.05,1.05);
+    background-color: rgb(92, 178, 212);
 }
 
 .aboutheading{
